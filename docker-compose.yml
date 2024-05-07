@@ -1,0 +1,21 @@
+#version: "2"
+services:
+  webserver:
+    image: mydemophpimage
+    ports:
+      - "80:80"
+      - "443:443"
+#    volumes:
+#      - ./app:/var/www/html
+    environment:
+      MYSQL_DB_CONNECTION: localhost
+      MYSQL_DB_NAME: test_php
+      MYSQL_USER: root
+      MYSQL_PASSWORD: ''
+      SITE_URL: http://localhost
+#    networks:
+#      - test
+
+#networks:
+#  test:
+#    external: true
